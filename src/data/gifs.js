@@ -1,3 +1,4 @@
+
 const data = [
     {
         type:"gif",
@@ -16,3 +17,5 @@ const data = [
         }
     }
 ]
+
+export default data;
