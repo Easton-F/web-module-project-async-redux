@@ -7,14 +7,16 @@ import { connect } from 'react-redux';
 function App(props) {
   const { loading, error } = props;
 
-  if (error !== "") {
-    return <h3>{error}</h3>
-  }
   return (
     <div className="App">
       <h1>Search for Gifs</h1>
 
       <GifForm />
+
+      {
+        (error !== "") && <h3>{error}</h3>
+      }
+
 
       {
         loading ? <h3>We are loading</h3> : <GifList />
