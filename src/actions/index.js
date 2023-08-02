@@ -3,10 +3,10 @@ import axios from "axios";
 export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 
-export const getGifs = () => {
+export const getGifs = (searchTerm) => {
     return(dispatch => {
         dispatch(fetchStart());
-    axios.get("https://api.giphy.com/v1/gifs/search?api_key=ZpZgtNVq2LtgUQY2Cgw41CviGVmQEk49&q=dogs")
+    axios.get(`https://api.giphy.com/v1/gifs/search?api_key=ZpZgtNVq2LtgUQY2Cgw41CviGVmQEk49&q=${searchTerm}`)
       .then(res=> {
         dispatch(fetchSuccess(res.data.data));
       })
