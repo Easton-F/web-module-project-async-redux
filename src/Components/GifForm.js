@@ -16,7 +16,7 @@ const GifForm = (props) => {
   }
 
     return(<form onSubmit={handleSubmit}>
-        <input onChange={handleChange}/>
+        <input onChange={handleChange} />
         <button>Search</button>
       </form>)
 }
